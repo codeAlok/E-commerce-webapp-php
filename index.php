@@ -1,3 +1,9 @@
+<!-- db connection file -->
+<?php
+    include('includes/connect.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,24 +82,27 @@
                 <li>
                     <a href="#"><h4>Brands</h4></a>
                 </li>
-                <li>
-                    <a href="#">brand1</a>
-                </li>
-                <li>
-                    <a href="#">brand2</a>
-                </li>
-                <li>
-                    <a href="#">brand3</a>
-                </li>
-                <li>
-                    <a href="#">brand4</a>
-                </li>
-                <li>
-                    <a href="#">brand5</a>
-                </li>
-                <li>
-                    <a href="#">brand5</a>
-                </li>
+
+                <!-- php to insert dynamic brands name from database -->
+                <?php
+                    $select_brands = "select * from brands";
+                    $result_brands = mysqli_query($con, $select_brands);
+
+                    // to bring data from database
+                    // $row_data = mysqli_fetch_assoc($result_brands);
+                    
+                    // echo $row_data['brand_title'];   // only first data from db will display
+
+                    while($row_data = mysqli_fetch_assoc($result_brands)) {
+                        $brand_title = $row_data['brand_title'];
+                        $brand_id = $row_data['brand_id'];
+                        // echo $brand_title;
+
+                        echo "<li> <a href='index.php?brand=$brand_id'> $brand_title </a> </li>";
+
+                    }
+                ?>
+
             </ul>
 
             <!-- categories section -->
@@ -101,24 +110,26 @@
                 <li>
                     <a href="#"><h4>categories</h4></a>
                 </li>
-                <li>
-                    <a href="#">categories1</a>
-                </li>
-                <li>
-                    <a href="#">categories2</a>
-                </li>
-                <li>
-                    <a href="#">categories3</a>
-                </li>
-                <li>
-                    <a href="#">categories4</a>
-                </li>
-                <li>
-                    <a href="#">categories5</a>
-                </li>
-                <li>
-                    <a href="#">categories5</a>
-                </li>
+                <!-- php to insert dynamic category name from database -->
+                <?php
+                    $select_categories = "select * from categories";
+                    $result_categories = mysqli_query($con, $select_categories);
+
+                    // to bring data from database
+                    // $row_data = mysqli_fetch_assoc($result_category);
+                    
+                    // echo $row_data['category_title'];   // only first data from db will display
+
+                    while($row_data = mysqli_fetch_assoc($result_categories)) {
+                        $category_title = $row_data['category_title'];
+                        $category_id = $row_data['category_id'];
+                        // echo $category_title;
+
+                        echo "<li> <a href='index.php?category=$category_id'> $category_title </a> </li>";
+
+                    }
+                ?>
+
             </ul>
         </div>
 
@@ -216,12 +227,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
 
     <!-- footer -->
     <footer class="footer">

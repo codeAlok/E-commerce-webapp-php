@@ -30,6 +30,8 @@
 ?>
 
 
+<!-- html part -->
+<h2 class="text-center">Insert Brands</h2>
 <form action="" method="post">
     <div>
         <span>@</span>

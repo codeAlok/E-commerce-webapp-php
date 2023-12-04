@@ -30,6 +30,7 @@
 ?>
 
 <!-- html part -->
+<h2 class="text-center">Insert Categories</h2>
 <form action="" method="post">
     <div>
         <span>@</span>
