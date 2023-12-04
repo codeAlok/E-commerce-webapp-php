@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    border: 2px solid rgb(0, 132, 255);
+    background-color: rgb(0, 140, 255);
+    margin-top: 5px;
+    padding: 2px;
+    border-radius: 5px;
+    color: white;
+}
+
+.body{
+    width: 100%;
+    background-color: aqua;
+}
+
+/* ******** Navbar ********** */
+.header {
+    background-color: rgb(111, 185, 255);
+    border: 2px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.navbar ul, .navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    list-style: none;
+    padding-right: 8px;
+}
+
+/* ********** third child ********* */
+.div3 {
+    background-color: grey;
+    border: 2px solid yellow;
+}
+.text-center {
+    text-align: center;
+}
+
+
+/* ************ fourth child ************* */
+.container {
+    border: 5px solid green;
+    display: flex;
+    width: 100%;
+    
+}
+
+/* +++++++ sidenav ++++++ */
+.container .sidenav {
+    width: 20%;
+    background-color: blanchedalmond;
+    text-align: center;
+    
+}
+
+.sidenav h4 {
+    font-size: 2rem;
+    background-color: aqua;
+}
+
+.sidenav ul li a {
+    font-size: 1.5rem;
+}
+
+/* ++++++ products ++++++ */
+.product-area {
+    border: 2px solid rgb(252, 11, 220);
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-area .card {
+    padding: 5px;
+    width: 30%;
+    margin: 2px;
+    border: 2px solid black;
+}
+
+.product-area .card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+
+
+
+/* *********** footer ********** */
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+}
