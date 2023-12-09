@@ -1,6 +1,50 @@
 <!-- conncection file including here -->
 <?php
     include('../includes/connect.php');
+
+    // name attribute value of insert_product to check if it is clicked
+    if(isset($_POST['insert_product'])) {
+        
+        // name attribute values of each one to target that field
+        $product_title = $_POST['product_title'];
+        $description = $_POST['description'];
+        $product_keywords = $_POST['product_keywords'];
+        $product_category = $_POST['product_category'];
+        $product_brand = $_POST['product_brand'];
+        $product_price = $_POST['product_price'];
+        $product_status = 'true';
+
+        // accessing images
+        $product_image1 = $_FILES['product_image1']['name'];
+        $product_image2 = $_FILES['product_image2']['name'];
+        $product_image3 = $_FILES['product_image3']['name'];
+
+        // accessing image tmp name
+        $temp_image1 = $_FILES['product_image1']['tmp_name'];
+        $temp_image2 = $_FILES['product_image2']['tmp_name'];
+        $temp_image3 = $_FILES['product_image3']['tmp_name'];
+
+        // checking empty condition
+        if($product_title=='' or $description=='' or $product_keywords=='' or $product_category=='' or $product_brand=='' or $product_price=='' or $product_image1=='' or $product_image2=='' or $product_image3=='') {
+
+            echo "<script> alert('Please fill all the available fields')</script>";
+            exit();
+
+        }else {
+            move_uploaded_file($temp_image1, "./product_images/$product_image1");
+            move_uploaded_file($temp_image2, "./product_images/$product_image2");
+            move_uploaded_file($temp_image3, "./product_images/$product_image3");
+
+            // insert query
+            $insert_products = "insert into products (product_title, product_description, product_keywords, category_id, brand_id, product_image1, product_image2, product_image3, product_price, date, status) values ('$product_title', '$description', '$product_keywords', '$product_category', '$product_brand', '$product_image1', '$product_image2', '$product_image3', '$product_price', NOW(), '$product_status')";
+
+            $result_query = mysqli_query($con, $insert_products);
+
+            if($result_query){
+                echo "<script> alert('successfully inserted the products') </script>";
+            }
+        }
+    }
 ?>
 
 <!-- Insert product page  -->
@@ -30,7 +74,7 @@
              <!-- discription -->
              <div>
                 <label for="product_description">Product description</label>
-                <input type="text" name="product_description" id="product_description" placeholder="Enter product description" autocomplete="off" required>
+                <input type="text" name="description" id="description" placeholder="Enter product description" autocomplete="off" required>
             </div>
 
               <!-- keywords -->
@@ -64,7 +108,7 @@
 
             <!-- Brands -->
             <div>
-                <select name="product_Brand" id="" >
+                <select name="product_brand" id="" >
                     <option value="">select a Brand</option>
 
                     <!-- to provide brand options from database -->
