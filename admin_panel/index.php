@@ -39,7 +39,7 @@
 
         <!-- buttons -->
         <div class="buttons">
-            <button class="btn"><a href="#" class="text-ceter">Insert Products</a></button>
+            <button class="btn"><a href="insert_product.php" class="text-ceter">Insert Products</a></button>
             <button class="btn"><a href="" class="text-ceter">View Products</a></button>
 
             <!-- get variable (insert_category variable) -->
