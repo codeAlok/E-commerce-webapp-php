@@ -135,96 +135,34 @@
 
         <!-- products -->
         <div class="product-area">
-            <div class="card">
-                <img src="images/men_shoe1.jpg" alt="product1">
-                <div class="card-body">
-                    <h5>card title</h5>
-                    <p>some text related to products</p>
-                    <a href="#" class="btn">Add to cart</a>
-                    <a href="#" class="btn">buy now</a>
 
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/men_shoe2.jpg" alt="product1">
-                <div class="card-body">
-                    <h5>card title</h5>
-                    <p>some text related to products</p>
-                    <a href="#" class="btn">Add to cart</a>
-                    <a href="#" class="btn">buy now</a>
+            <!-- fetching dynamic products from db -->
+            <?php
+                // query to fetch all products and display that in random order
+                $select_query = "select * from products order by rand()";
+                $result_query = mysqli_query($con, $select_query);
+                
+                while($row = mysqli_fetch_assoc($result_query)) {
+                    $product_id = $row['product_id'];
+                    $product_title = $row['product_title'];
+                    $product_description = $row['product_description'];
+                    $product_image1 = $row['product_image1'];
+                    $product_price = $row['product_price'];
+                    $brand_id = $row['brand_id'];
+                    $category_id = $row['category_id'];
 
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/women_shoe1.jpg" alt="product1">
-                <div class="card-body">
-                    <h5>card title</h5>
-                    <p>some text related to products</p>
-                    <a href="#" class="btn">Add to cart</a>
-                    <a href="#" class="btn">buy now</a>
+                    echo "<div class='card'>
+                            <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                            <div class='card-body'>
+                                <h5>$product_title</h5>
+                                <p>$product_description</p>
+                                <a href='#' class='btn'>Add to cart</a>
+                                <a href='#' class='btn'>buy now</a>
+                            </div>
+                        </div> ";
+                }
+            ?>
 
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/men_shoe2.jpg" alt="product1">
-                <div class="card-body">
-                    <h5>card title</h5>
-                    <p>some text related to products</p>
-                    <a href="#" class="btn">Add to cart</a>
-                    <a href="#" class="btn">buy now</a>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/women_shoe1.jpg" alt="product1">
-                <div class="card-body">
-                    <h5>card title</h5>
-                    <p>some text related to products</p>
-                    <a href="#" class="btn">Add to cart</a>
-                    <a href="#" class="btn">buy now</a>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/men_shoe2.jpg" alt="product1">
-                <div class="card-body">
-                    <h5>card title</h5>
-                    <p>some text related to products</p>
-                    <a href="#" class="btn">Add to cart</a>
-                    <a href="#" class="btn">buy now</a>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/men_shoe11.jpg" alt="product1">
-                <div class="card-body">
-                    <h5>card title</h5>
-                    <p>some text related to products</p>
-                    <a href="#" class="btn">Add to cart</a>
-                    <a href="#" class="btn">buy now</a>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/men_shoe3.jpg" alt="product1">
-                <div class="card-body">
-                    <h5>card title</h5>
-                    <p>some text related to products</p>
-                    <a href="#" class="btn">Add to cart</a>
-                    <a href="#" class="btn">buy now</a>
-
-                </div>
-            </div>
-            <div class="card">
-                <img src="images/men_shoe10.jpg" alt="product1">
-                <div class="card-body">
-                    <h5>card title</h5>
-                    <p>some text related to products</p>
-                    <a href="#" class="btn">Add to cart</a>
-                    <a href="#" class="btn">buy now</a>
-
-                </div>
-            </div>
         </div>
     </div>
 
