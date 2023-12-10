@@ -112,8 +112,10 @@
 
             <!-- fetching dynamic products from db -->
             <?php
-                // accessing all products written inside this function
-                getproducts();
+                
+                getproducts(); // to display all products
+                get_unique_categories();  // to show unique product matching category_id
+                get_unique_brands();  // to show unique brand matching brand_id
             ?>
 
         </div>
