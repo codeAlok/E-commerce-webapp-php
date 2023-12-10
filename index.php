@@ -1,6 +1,9 @@
-<!-- db connection file -->
 <?php
+    //  db connection file
     include('includes/connect.php');
+
+    // common_function file included
+    include('functions/common_function.php');
 ?>
 
 
@@ -77,7 +80,7 @@
     <div class="container">
         <!-- sidenav -->
         <div class="sidenav">
-            <!-- brands section -->
+            <!-- ***** brands section ***** -->
             <ul>
                 <li>
                     <a href="#"><h4>Brands</h4></a>
@@ -85,82 +88,32 @@
 
                 <!-- php to insert dynamic brands name from database -->
                 <?php
-                    $select_brands = "select * from brands";
-                    $result_brands = mysqli_query($con, $select_brands);
-
-                    // to bring data from database
-                    // $row_data = mysqli_fetch_assoc($result_brands);
-                    
-                    // echo $row_data['brand_title'];   // only first data from db will display
-
-                    while($row_data = mysqli_fetch_assoc($result_brands)) {
-                        $brand_title = $row_data['brand_title'];
-                        $brand_id = $row_data['brand_id'];
-                        // echo $brand_title;
-
-                        echo "<li> <a href='index.php?brand=$brand_id'> $brand_title </a> </li>";
-
-                    }
+                    // function call to display all brands
+                    getbrands();
                 ?>
-
             </ul>
 
-            <!-- categories section -->
+            <!-- ****** categories section ****** -->
             <ul>
                 <li>
                     <a href="#"><h4>categories</h4></a>
                 </li>
+
                 <!-- php to insert dynamic category name from database -->
                 <?php
-                    $select_categories = "select * from categories";
-                    $result_categories = mysqli_query($con, $select_categories);
-
-                    // to bring data from database
-                    // $row_data = mysqli_fetch_assoc($result_category);
-                    
-                    // echo $row_data['category_title'];   // only first data from db will display
-
-                    while($row_data = mysqli_fetch_assoc($result_categories)) {
-                        $category_title = $row_data['category_title'];
-                        $category_id = $row_data['category_id'];
-                        // echo $category_title;
-
-                        echo "<li> <a href='index.php?category=$category_id'> $category_title </a> </li>";
-
-                    }
+                    getcategories(); // to display all categories
                 ?>
 
             </ul>
         </div>
 
-        <!-- products -->
+        <!-- ***** products  ****** -->
         <div class="product-area">
 
             <!-- fetching dynamic products from db -->
             <?php
-                // query to fetch all products and display that in random order
-                $select_query = "select * from products order by rand()";
-                $result_query = mysqli_query($con, $select_query);
-                
-                while($row = mysqli_fetch_assoc($result_query)) {
-                    $product_id = $row['product_id'];
-                    $product_title = $row['product_title'];
-                    $product_description = $row['product_description'];
-                    $product_image1 = $row['product_image1'];
-                    $product_price = $row['product_price'];
-                    $brand_id = $row['brand_id'];
-                    $category_id = $row['category_id'];
-
-                    echo "<div class='card'>
-                            <img src='./admin_panel/product_images/$product_image1' alt='product1'>
-                            <div class='card-body'>
-                                <h5>$product_title</h5>
-                                <p>$product_description</p>
-                                <a href='#' class='btn'>Add to cart</a>
-                                <a href='#' class='btn'>buy now</a>
-                            </div>
-                        </div> ";
-                }
+                // accessing all products written inside this function
+                getproducts();
             ?>
 
         </div>
