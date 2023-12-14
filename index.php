@@ -51,7 +51,7 @@
                     <a href="#">Total price: 100/-</a>
                 </li>
             </ul>
-            <!-- <form action="#">
+            <!-- <form>
                 <input type="search" placeholder="Search" aria-label="Search">
                 <input type="submit" value="Search" class="btn">
             </form> -->

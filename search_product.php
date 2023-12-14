@@ -1,4 +1,4 @@
-<!-- *********** This file is to show all products from databse and search functionality (Products) -->
+<!-- *********** SEARCH FUNCTION (This file is to show all products from databse based on "SEARCH KEYWORDS") -->
 
 
 <?php
@@ -114,9 +114,9 @@
         <div class="product-area">
 
             <!-- fetching dynamic products from db -->
-            <?php  
+            <?php
                 
-                get_all_products(); // to display all products
+                search_product(); // to display all products based on matched keyword
                 get_unique_categories();  // to show unique product matching category_id
                 get_unique_brands();  // to show unique brand matching brand_id
             ?>
