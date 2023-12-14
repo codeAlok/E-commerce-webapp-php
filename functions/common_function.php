@@ -38,6 +38,42 @@
         }
     }
 
+    // ************ To get all products for "products page" ****************
+    function get_all_products() {
+        global $con;  // to access globally
+
+
+        // condition to check brand variable or category variable isset, if not given then show all products
+        if(!isset($_GET['category'])) {
+            if(!isset($_GET['brand'])) {
+
+                // query to fetch all products and display that in random order
+                $select_query = "select * from products order by rand()";
+                $result_query = mysqli_query($con, $select_query);
+                
+                while($row = mysqli_fetch_assoc($result_query)) {
+                    $product_id = $row['product_id'];
+                    $product_title = $row['product_title'];
+                    $product_description = $row['product_description'];
+                    $product_image1 = $row['product_image1'];
+                    $product_price = $row['product_price'];
+                    $brand_id = $row['brand_id'];
+                    $category_id = $row['category_id'];
+        
+                    echo "<div class='card'>
+                            <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                            <div class='card-body'>
+                                <h5>$product_title</h5>
+                                <p>$product_description</p>
+                                <a href='#' class='btn'>Add to cart</a>
+                                <a href='#' class='btn'>buy now</a>
+                            </div>
+                        </div> ";
+                }
+            }
+        } 
+    }
+
     // ********* function for getting unique category product **********
     function get_unique_categories() {
         global $con;  // to access globally

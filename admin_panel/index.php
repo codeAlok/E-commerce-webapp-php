@@ -68,8 +68,6 @@
                 include('insert_brands.php');
             }
 
-            
-
         ?>
     </div>
 

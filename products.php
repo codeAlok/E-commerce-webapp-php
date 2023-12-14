@@ -1,3 +1,6 @@
+<!-- *********** This file is to show all products from databse and search functionality (Products) -->
+
+
 <?php
     //  db connection file
     include('includes/connect.php');
@@ -51,10 +54,10 @@
                     <a href="#">Total price: 100/-</a>
                 </li>
             </ul>
-            <!-- <form action="#">
-                <input type="search" placeholder="Search" aria-label="Search">
-                <input type="submit" value="Search" class="btn">
-            </form> -->
+            <form action="#">
+                <input type="search" placeholder="Search" aria-label="Search" name="search_data">
+                <input type="submit" value="Search" class="btn" name="search_data_product">
+            </form>
         </nav>
     </div>
 
@@ -113,7 +116,7 @@
             <!-- fetching dynamic products from db -->
             <?php
                 
-                getproducts(); // to display all products
+                get_all_products(); // to display all products
                 get_unique_categories();  // to show unique product matching category_id
                 get_unique_brands();  // to show unique brand matching brand_id
             ?>
@@ -123,6 +126,8 @@
 
     <!-- include footer -->
     <?php include("./includes/footer.php");  ?>
+    
+   
 </body>
 
 </html>
