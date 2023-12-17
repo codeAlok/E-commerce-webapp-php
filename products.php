@@ -54,7 +54,7 @@
                     <a href="#">Total price: 100/-</a>
                 </li>
             </ul>
-            <form action="search_product.php" method="get">
+            <form action="" method="get">
                 <input type="search" placeholder="Search" aria-label="Search" name="search_data">
                 <input type="submit" value="Search" class="btn" name="search_product_data">
             </form>
@@ -114,9 +114,15 @@
         <div class="product-area">
 
             <!-- fetching dynamic products from db -->
-            <?php  
-                
-                get_all_products(); // to display all products
+            <?php 
+
+                // *** if searched something show searched product/error otherwise all product ***
+                if(isset($_GET['search_product_data'])) {
+                    search_product(); 
+                }else {
+                    get_all_products(); // to display all products
+                }
+
                 get_unique_categories();  // to show unique product matching category_id
                 get_unique_brands();  // to show unique brand matching brand_id
             ?>
