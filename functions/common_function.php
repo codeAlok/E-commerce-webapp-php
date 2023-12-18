@@ -229,4 +229,78 @@
            
     }
 
+    // ********* View Details function **********
+    function view_details() {
+        global $con;  // to access globally
+
+        // condition if product_id isset, then fetch related data
+        if(isset($_GET['product_id'])) { 
+            
+            $product_id = $_GET['product_id']; // store product_id from url
+            $select_query = "select * from products where product_id=$product_id";
+            $result_query = mysqli_query($con, $select_query);
+            
+            while($row = mysqli_fetch_assoc($result_query)) {
+                $product_id = $row['product_id'];
+                $product_title = $row['product_title'];
+                $product_description = $row['product_description'];
+                $product_image1 = $row['product_image1'];
+                $product_image2 = $row['product_image2'];
+                $product_image3 = $row['product_image3'];
+                $product_price = $row['product_price'];
+                $brand_id = $row['brand_id'];
+                $category_id = $row['category_id'];
+    
+                echo "<div class='card-wrapper'>
+                        <div class='card-container'>
+                            <!-- card left -->
+                            <div class='product-imgs'>
+                                <div class='img-display'>
+                                    <div class='img-showcase'>
+                                        <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                                        <img src='./admin_panel/product_images/$product_image2' alt='product2'>
+                                        <img src='./admin_panel/product_images/$product_image3' alt='product3'>
+                                    </div>
+                                </div>
+                                <div class='img-select'>
+                                    <div class='img-item'>
+                                        <a href='#' data-id = '1'>
+                                            <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                                        </a>
+                                    </div>
+                                    <div class = 'img-item'>
+                                        <a href='#' data-id = '2'>
+                                            <img src='./admin_panel/product_images/$product_image2' alt='product2'>
+                                        </a>
+                                    </div>
+                                    <div class='img-item'>
+                                        <a href='#' data-id = '3'>
+                                            <img src='./admin_panel/product_images/$product_image3' alt='product3'>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card right -->
+                            <div class='product-content'>
+                                <h2 class='product-title'>$product_title</h2>
+            
+                                <p class='product-price'>$$product_price</p>
+            
+                                <div class='product-detail'>
+                                    <h2>about this item: </h2>
+                                    <p>$product_description</p>
+                                </div>
+            
+                                <div class ='purchase-info'>
+                                    <button type='button' class='btn'>
+                                    Add to Cart <i class='fas fa-shopping-cart'></i>
+                                    </button>
+                                    <button type='button' class='btn'>Buy Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>";
+            }
+        }
+    }
 ?>

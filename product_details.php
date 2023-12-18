@@ -73,80 +73,9 @@
     <div class="container">
 
         <!-- ***** diffrent html part just for product page start (need customization) ******-->
-        <div class = "card-wrapper">
-        <div class = "card-container">
-            <!-- card left -->
-            <div class = "product-imgs">
-            <div class = "img-display">
-                <div class = "img-showcase">
-                <img src = "images/shoe1.jpg" alt = "shoe image">
-                <img src = "images/shoe2.jpg" alt = "shoe image">
-                <img src = "images/shoe3.jpg" alt = "shoe image">
-                <img src = "images/shoe4.jpg" alt = "shoe image">
-                </div>
-            </div>
-            <div class = "img-select">
-                <div class = "img-item">
-                <a href = "#" data-id = "1">
-                    <img src = "images/shoe1.jpg" alt = "shoe image">
-                </a>
-                </div>
-                <div class = "img-item">
-                <a href = "#" data-id = "2">
-                    <img src = "images/shoe2.jpg" alt = "shoe image">
-                </a>
-                </div>
-                <div class = "img-item">
-                <a href = "#" data-id = "3">
-                    <img src = "images/shoe3.jpg" alt = "shoe image">
-                </a>
-                </div>
-                <div class = "img-item">
-                <a href = "#" data-id = "4">
-                    <img src = "images/shoe4.jpg" alt = "shoe image">
-                </a>
-                </div>
-            </div>
-            </div>
-            <!-- card right -->
-            <div class = "product-content">
-            <h2 class = "product-title">Nike shoes</h2>
-
-            <p class = "product-price">$249</p>
-
-            <div class = "product-detail">
-                <h2>about this item: </h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eveniet veniam tempora fuga tenetur placeat sapiente architecto illum soluta consequuntur, aspernatur quidem at sequi ipsa!</p>
-            </div>
-
-            <div class = "purchase-info">
-                <button type = "button" class = "btn">
-                Add to Cart <i class = "fas fa-shopping-cart"></i>
-                </button>
-                <button type = "button" class = "btn">Buy Now</button>
-            </div>
-
-            <div class = "social-links">
-                <p>Share At: </p>
-                <a href = "#">
-                <i class = "fab fa-facebook-f"></i>
-                </a>
-                <a href = "#">
-                <i class = "fab fa-twitter"></i>
-                </a>
-                <a href = "#">
-                <i class = "fab fa-instagram"></i>
-                </a>
-                <a href = "#">
-                <i class = "fab fa-whatsapp"></i>
-                </a>
-                <a href = "#">
-                <i class = "fab fa-pinterest"></i>
-                </a>
-            </div>
-            </div>
-        </div>
-        </div>
+        <?php
+            view_details(); // all html inside this function for dynamic data logic
+        ?>
         <!-- diffrent html part just for product page end -->
     </div>
 
