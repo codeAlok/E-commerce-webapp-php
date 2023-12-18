@@ -25,13 +25,13 @@
                     $category_id = $row['category_id'];
         
                     echo "<div class='card'>
-                            <img src='./admin_panel/product_images/$product_image1' alt='product1'>
-                            <div class='card-body'>
-                                <h5>$product_title</h5>
-                                <p>$product_description</p>
-                                <a href='#' class='btn'>Add to cart</a>
-                                <a href='#' class='btn'>buy now</a>
-                            </div>
+                            <a href='product_details.php?product_id=$product_id'>
+                                <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                                <div class='card-body'>
+                                    <h5>$product_title</h5>
+                                    <p>$product_description</p>
+                                </div>
+                            </a>
                         </div> ";
                 }
             }
@@ -61,13 +61,13 @@
                     $category_id = $row['category_id'];
         
                     echo "<div class='card'>
-                            <img src='./admin_panel/product_images/$product_image1' alt='product1'>
-                            <div class='card-body'>
-                                <h5>$product_title</h5>
-                                <p>$product_description</p>
-                                <a href='#' class='btn'>Add to cart</a>
-                                <a href='#' class='btn'>buy now</a>
-                            </div>
+                            <a href='product_details.php?product_id=$product_id'>
+                                <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                                <div class='card-body'>
+                                    <h5>$product_title</h5>
+                                    <p>$product_description</p>
+                                </div>
+                            </a>
                         </div> ";
                 }
             }
@@ -101,13 +101,13 @@
                 $category_id = $row['category_id'];
     
                 echo "<div class='card'>
-                        <img src='./admin_panel/product_images/$product_image1' alt='product1'>
-                        <div class='card-body'>
-                            <h5>$product_title</h5>
-                            <p>$product_description</p>
-                            <a href='#' class='btn'>Add to cart</a>
-                            <a href='#' class='btn'>buy now</a>
-                        </div>
+                        <a href='product_details.php?product_id=$product_id'>
+                            <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                            <div class='card-body'>
+                                <h5>$product_title</h5>
+                                <p>$product_description</p>
+                            </div>
+                        </a>
                     </div> ";
             }
             
@@ -141,13 +141,13 @@
                 $category_id = $row['category_id'];
     
                 echo "<div class='card'>
-                        <img src='./admin_panel/product_images/$product_image1' alt='product1'>
-                        <div class='card-body'>
-                            <h5>$product_title</h5>
-                            <p>$product_description</p>
-                            <a href='#' class='btn'>Add to cart</a>
-                            <a href='#' class='btn'>buy now</a>
-                        </div>
+                        <a href='product_details.php?product_id=$product_id'>
+                            <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                            <div class='card-body'>
+                                <h5>$product_title</h5>
+                                <p>$product_description</p>
+                            </div>
+                        </a>
                     </div> ";
             }
             
@@ -216,13 +216,13 @@
                 $category_id = $row['category_id'];
                 
                 echo "<div class='card'>
-                <img src='./admin_panel/product_images/$product_image1' alt='product1'>
-                <div class='card-body'>
-                <h5>$product_title</h5>
-                <p>$product_description</p>
-                <a href='#' class='btn'>Add to cart</a>
-                <a href='#' class='btn'>buy now</a>
-                </div>
+                        <a href='product_details.php?product_id=$product_id'>
+                            <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                            <div class='card-body'>
+                                <h5>$product_title</h5>
+                                <p>$product_description</p>
+                            </div>
+                        </a>
                 </div> ";
             }
         }
