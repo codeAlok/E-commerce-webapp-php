@@ -26,7 +26,7 @@
 </head>
 
 <body>
-
+    
     <!-- **** navbar  *** -->
     <div class="header">
         <a href="#" class="logo">Heel2Toe</a>

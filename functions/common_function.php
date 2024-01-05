@@ -72,10 +72,20 @@
         
                     echo "<div class='card'>
                             <a href='product_details.php?product_id=$product_id'>
-                                <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                                <div class='card-image'>
+                                    <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                                </div>
                                 <div class='card-body'>
                                     <h5>$product_title</h5>
                                     <p>$product_description</p>
+                                    <div class='star'>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                    </div>
+                                    <h4>$ $product_price</h4>
                                 </div>
                             </a>
                         </div> ";
@@ -111,14 +121,24 @@
                 $category_id = $row['category_id'];
     
                 echo "<div class='card'>
-                        <a href='product_details.php?product_id=$product_id'>
-                            <img src='./admin_panel/product_images/$product_image1' alt='product1'>
-                            <div class='card-body'>
-                                <h5>$product_title</h5>
-                                <p>$product_description</p>
-                            </div>
-                        </a>
-                    </div> ";
+                            <a href='product_details.php?product_id=$product_id'>
+                                <div class='card-image'>
+                                    <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                                </div>
+                                <div class='card-body'>
+                                    <h5>$product_title</h5>
+                                    <p>$product_description</p>
+                                    <div class='star'>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                    </div>
+                                    <h4>$ $product_price</h4>
+                                </div>
+                            </a>
+                        </div> ";
             }
             
         }
@@ -151,20 +171,30 @@
                 $category_id = $row['category_id'];
     
                 echo "<div class='card'>
-                        <a href='product_details.php?product_id=$product_id'>
-                            <img src='./admin_panel/product_images/$product_image1' alt='product1'>
-                            <div class='card-body'>
-                                <h5>$product_title</h5>
-                                <p>$product_description</p>
-                            </div>
-                        </a>
-                    </div> ";
+                            <a href='product_details.php?product_id=$product_id'>
+                                <div class='card-image'>
+                                    <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                                </div>
+                                <div class='card-body'>
+                                    <h5>$product_title</h5>
+                                    <p>$product_description</p>
+                                    <div class='star'>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                    </div>
+                                    <h4>$ $product_price</h4>
+                                </div>
+                            </a>
+                        </div> ";
             }
             
         }
     }
 
-    // ******* function to display brands ********
+    // ******* function to display brands on products page ********
     function getbrands() {
         global $con;  // to access globally
 
@@ -179,12 +209,12 @@
             $brand_title = $row_data['brand_title'];
             $brand_id = $row_data['brand_id'];
 
-            echo "<li> <a href='index.php?brand=$brand_id'> $brand_title </a> </li>";
+            echo "<li> <a href='products.php?brand=$brand_id'> $brand_title </a> </li>";
 
         }
     }
 
-    // ******** function to display category ********
+    // ******** function to display category on products page ********
     function getcategories() {
         global $con; // to access globally
 
@@ -195,7 +225,7 @@
             $category_title = $row_data['category_title'];
             $category_id = $row_data['category_id'];
 
-            echo "<li> <a href='index.php?category=$category_id'> $category_title </a> </li>";
+            echo "<li> <a href='products.php?category=$category_id'> $category_title </a> </li>";
 
         }
     }
@@ -226,14 +256,24 @@
                 $category_id = $row['category_id'];
                 
                 echo "<div class='card'>
-                        <a href='product_details.php?product_id=$product_id'>
-                            <img src='./admin_panel/product_images/$product_image1' alt='product1'>
-                            <div class='card-body'>
-                                <h5>$product_title</h5>
-                                <p>$product_description</p>
-                            </div>
-                        </a>
-                </div> ";
+                            <a href='product_details.php?product_id=$product_id'>
+                                <div class='card-image'>
+                                    <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                                </div>
+                                <div class='card-body'>
+                                    <h5>$product_title</h5>
+                                    <p>$product_description</p>
+                                    <div class='star'>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                    </div>
+                                    <h4>$ $product_price</h4>
+                                </div>
+                            </a>
+                        </div> ";
             }
         }
            

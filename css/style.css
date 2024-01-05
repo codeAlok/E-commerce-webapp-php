@@ -205,7 +205,6 @@ p {
 
 /* ************ third child(all products) ************* */
 .all-products {
-    border: 5px solid green;
     display: flex;
     width: 100%;
     
@@ -230,10 +229,9 @@ p {
 
 /* ++++++ products ++++++ */
 .product-area {
-    border: 2px solid rgb(252, 11, 220);
     width: 80%;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
     flex-wrap: wrap;
 }
