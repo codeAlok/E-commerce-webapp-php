@@ -1,3 +1,4 @@
+/* ******** utility css start *********** */
 *{
     margin: 0;
     padding: 0;
@@ -22,16 +23,66 @@ a {
     background-color: aqua;
 }
 
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+
+
+/* ******** utility css end *********** */
+
+
+/* ******** Home Page ********* */
 /* ******** Navbar ********** */
 .header {
-    background-color: rgb(111, 185, 255);
-    border: 2px solid red;
+    background: #e3e6f3;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.06);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5px;
+    padding: 1.5rem 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
+.header .logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #09746c;
+}
 .navbar ul, .navbar {
     display: flex;
     align-items: center;
@@ -40,20 +91,120 @@ a {
 .navbar ul li {
     list-style: none;
     padding-right: 8px;
+    position: relative;
 }
 
-/* ********** third child ********* */
-.div3 {
-    background-color: grey;
-    border: 2px solid yellow;
+.navbar li a {
+    font-size: 16px;
+    font-weight: 550;
+    color: #1a1a1a;
+    transition: 0.3s ease;
 }
-.text-center {
+
+.navbar li a:hover,
+.navbar li a.active {
+    color: #088178;
+
+}
+
+.navbar li a.active::after,
+.navbar li a:hover::after {
+    content: "";
+    width: 40%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+}
+
+/* home page (landing page banner) */
+#home-banner {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 5vw;
+}
+
+#home-banner h4 {
+    padding-bottom: 15px;
+}
+
+#home-banner h1 {
+    color: #088178;
+}
+
+#home-banner button {
+    padding: 0.71rem;
+    background-color: #088178;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+
+}
+
+#home-banner img {
+    position: absolute;
+    right: 5vw;
+    width: 40%;
+    border-radius: 30%;
+}
+
+/* ******* features section ****** */
+#services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+    padding-left: 1rem;
+}
+
+#services-container .service {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem 0;
+}
+
+#services-container .service i {
+    font-size: 2.5rem;
+    color: #088178;
+}
+
+#services-container .service h3 {
+    font-size: 1.5rem;
+    color: black;
+}
+
+#services-container .service p {
+    margin: 3px 0;
+}
+
+/* ******* Featured products ******** */
+#featured-products, #newArrival-products {
     text-align: center;
 }
 
+.card-area {
+    display: flex;
+    align-items:start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-/* ************ fourth child ************* */
-.container {
+
+/* ******* NewArrival-products ******* */
+
+
+
+/* card css done below in product section */
+
+
+/* ************ third child(all products) ************* */
+.all-products {
     border: 5px solid green;
     display: flex;
     width: 100%;
@@ -61,7 +212,7 @@ a {
 }
 
 /* +++++++ sidenav ++++++ */
-.container .sidenav {
+.all-products .sidenav {
     width: 20%;
     background-color: blanchedalmond;
     text-align: center;
@@ -87,21 +238,90 @@ a {
     flex-wrap: wrap;
 }
 
-.product-area .card {
+ .card {
     padding: 5px;
-    width: 30%;
-    margin: 2px;
+    width: 23%;
+    min-width: 200px;
+    margin: 0 5px 5px 0;
     border: 2px solid black;
+    cursor: pointer;
+    text-align: left;
 }
 
-.product-area .card img {
+.card p {
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+.card .card-image {
     width: 100%;
-    object-fit: contain;
+    aspect-ratio: 1/1.2;
 }
 
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+.card-body .star i {
+    color: orange;
+}
 
+/* ****** newsletter sectoion ****** */
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(55, 29, 128);
 
+}
+
+#newsletter h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#newsletter p {
+    font-size: 14px;
+    font-weight: 600;
+    color: grey;
+}
+
+#newsletter p span{
+    color: orange;
+}
+
+#newsletter .form {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25rem;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+#newsletter button {
+    background-color: #088178;
+    color: white;
+    height: 3.125rem;
+    padding: 0 0.5rem;
+    width: 6rem;
+    font-size: 14px;
+    border: 1px solid transparent;
+    outline: none;
+    border-radius: 0;
+    margin-bottom: 5px;
+    
+}
 
 /* *********** footer ********** */
 .footer {

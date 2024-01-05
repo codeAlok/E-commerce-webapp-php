@@ -26,10 +26,20 @@
         
                     echo "<div class='card'>
                             <a href='product_details.php?product_id=$product_id'>
-                                <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                                <div class='card-image'>
+                                    <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                                </div>
                                 <div class='card-body'>
                                     <h5>$product_title</h5>
                                     <p>$product_description</p>
+                                    <div class='star'>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                    </div>
+                                    <h4>$ $product_price</h4>
                                 </div>
                             </a>
                         </div> ";

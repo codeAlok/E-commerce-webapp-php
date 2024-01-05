@@ -26,14 +26,14 @@
 </head>
 
 <body>
-    <!-- <h1>it's working</h1> -->
-    <!-- navbar -->
+
+    <!-- **** navbar  *** -->
     <div class="header">
-        <a href="#" class="logo">LOGO</a>
+        <a href="#" class="logo">Heel2Toe</a>
         <nav class="navbar">
             <ul>
                 <li>
-                    <a href="index.php">Home</a>
+                    <a href="index.php" class="active">Home</a>
                 </li>
                 <li>
                     <a href="products.php">Products</a>
@@ -51,75 +51,234 @@
                     <a href="#">Total price: 100/-</a>
                 </li>
             </ul>
-            <!-- <form>
-                <input type="search" placeholder="Search" aria-label="Search">
-                <input type="submit" value="Search" class="btn">
-            </form> -->
+
         </nav>
     </div>
 
-    <!-- second child -->
-    <nav class="navbar header">
-        <ul>
-            <li>
-                <a href="#">Welcome Guest</a>
-            </li>
-            <li>
-                <a href="#">Login</a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- third child -->
-    <div class="div3">
-        <h3 class="text-center">Hidden Store</h3>
-        <p class="text-center">Communication is at the heart of e-commerce and community</p>
-    </div>
-
-    <!-- fourth child -->
-    <div class="container">
-        <!-- sidenav -->
-        <div class="sidenav">
-            <!-- ***** brands section ***** -->
-            <ul>
-                <li>
-                    <a href="#"><h4>Brands</h4></a>
-                </li>
-
-                <!-- php to insert dynamic brands name from database -->
-                <?php
-                    // function call to display all brands
-                    getbrands();
-                ?>
-            </ul>
-
-            <!-- ****** categories section ****** -->
-            <ul>
-                <li>
-                    <a href="#"><h4>categories</h4></a>
-                </li>
-
-                <!-- php to insert dynamic category name from database -->
-                <?php
-                    getcategories(); // to display all categories
-                ?>
-
-            </ul>
+    <!-- ***** landing page banner **** -->
+    <section id="home-banner">
+        <div>
+            <h4>Trade-in-offer</h4>
+            <h2>Super value deals</h2>
+            <h1>On all products</h1>
+            <p>Save more with coupons & up to 70% off!</p>
+            <button>Shop Now</button>
         </div>
 
+        <img src="images/men_shoe8.jpg" alt="">
+    </section>
+
+    <!-- ******* e-commerce services ********* -->
+    <section id="services-container">
+        <div class="service">
+            <i class="fa-solid fa-truck"></i>
+            <div class="content">
+                <h3>free shipping</h3>
+                <p>order over $100</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            <div class="content">
+                <h3>Money Back Gurantee</h3>
+                <p>Within 24 hours</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-lock"></i>
+            <div class="content">
+                <h3>Secure payment</h3>
+                <p>100% secure payment</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-headset"></i>
+            <div class="content">
+                <h3>24/7 support</h3>
+                <p>call us anytime</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ******** featured products ******** -->
+    <section id="featured-products">
+        <h2>Featured products</h2>
+        <p>Winter Collection New Modern Designs</p>
+
+        <div class="card-area">
+            <div class="card">
+                <a href="#">
+                    <div class="card-image">
+                        <img src="images/men_shoe3.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5>Puma</h5>
+                        <p>This is a new product recently launched</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$80</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <div class="card-image">
+                        <img src="images/women_slipper2.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5>Puma</h5>
+                        <p>This is a new product recently launched</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$80</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <div class="card-image">
+                        <img src="images/men_shoe10.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5>Puma</h5>
+                        <p>This is a new product recently launched</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$80</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <div class="card-image">
+                        <img src="images/women_slipper3.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5>Puma</h5>
+                        <p>This is a new product recently launched</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$80</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <div class="card-image">
+                        <img src="images/men_shoe3.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5>Puma</h5>
+                        <p>This is a new product recently launched</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$80</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <div class="card-image">
+                        <img src="images/shoe1.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5>Puma</h5>
+                        <p>This is a new product recently launched</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$80</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <div class="card-image">
+                        <img src="images/men_shoe5.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h5>Puma</h5>
+                        <p>This is a new product recently launched</p>
+                        <div class="star">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>$80</h4>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ***** New Arrival Section ***** -->
+    <section id="newArrival-products">
+        <h2>Latest products</h2>
+        <p>Winter Collection New Modern Designs</p>
+
         <!-- ***** products  ****** -->
-        <div class="product-area">
+        <div class="card-area">
 
             <!-- fetching dynamic products from db -->
             <?php
                 
                 getproducts(); // to display all products
-                get_unique_categories();  // to show unique product matching category_id
-                get_unique_brands();  // to show unique brand matching brand_id
+
             ?>
 
         </div>
-    </div>
+    </section>
+
+
+    <!-- ****** Newsletter section ******* -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletter</h4>
+            <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+
+        <div class="form">
+            <input type="text" placeholder="Your email address">
+            <button class="btn">Sign Up</button>
+        </div>
+    </section>
+
 
     <!-- include footer -->
     <?php include("./includes/footer.php");  ?>

@@ -64,13 +64,7 @@
     </nav>
 
     <!-- third child -->
-    <div class="div3">
-        <h3 class="text-center">Hidden Store</h3>
-        <p class="text-center">Communication is at the heart of e-commerce and community</p>
-    </div>
-
-    <!-- fourth child -->
-    <div class="container">
+    <div class="all-products">
 
         <!-- ***** diffrent html part just for product page start (need customization) ******-->
         <?php
