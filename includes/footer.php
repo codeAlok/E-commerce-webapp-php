@@ -1,6 +1,6 @@
 
 
-<footer class="footer">
+<footer class="footer" id="footer">
         <div class="footer-container">
                 <section class="sec slogan">
                         <h2><a href="#" class="logo">Heel2Toe</a></h2>

@@ -45,7 +45,7 @@
                     <a href="#">Register</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#footer">Contact</a>
                 </li>
                 <li>
                     <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><sup>1</sup></a>
