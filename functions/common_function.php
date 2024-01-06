@@ -342,10 +342,10 @@
                                 </div>
             
                                 <div class ='purchase-info'>
-                                    <button type='button' class='btn'>
-                                    Add to Cart <i class='fas fa-shopping-cart'></i>
+                                    <button type='button' class='btn'><a href='product_details.php?product_id=$product_id&add_to_cart=$product_id'>
+                                    Add to Cart<i class='fa-solid fa-cart-arrow-down'></i></a></i>
                                     </button>
-                                    <button type='button' class='btn'>Buy Now</button>
+                                    <button type='button' class='btn'><a href='#'>Buy Now<i class='fa-solid fa-heart'></i></a></button>
                                 </div>
                             </div>
                         </div>
@@ -376,6 +376,25 @@
     // echo 'User Real IP Address - '.$ip;  
 
     // ********** Cart function ***********
-    function cart() {}
+    function cart() {
+        if(isset($_GET['add_to_cart'])) {
+            global $con;
+
+            $get_ip_address = getIPAddress();
+            $get_product_id = $_GET['add_to_cart'];
+            $select_query = "select * from cart_details where ip_address='$get_ip_address' and product_id=$get_product_id";
+            $result_query = mysqli_query($con, $select_query);
+            $num_of_rows = mysqli_num_rows($result_query); // count numbers of data
+
+            if($num_of_rows > 0){
+                echo "<script>alert('This item is already present inside cart') </script>";
+            }
+            else {
+                $insert_query = "insert into cart_details (product_id, ip_address, quantity) values ($get_product_id, '$get_ip_address', 0)";
+                $result_query = mysqli_query($con, $insert_query);
+                echo "<script>alert('Item added to cart') </script>";
+            }
+        }
+    }
 
 ?>

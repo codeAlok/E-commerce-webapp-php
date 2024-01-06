@@ -69,6 +69,8 @@
         <!-- ***** diffrent html part just for product page start (need customization) ******-->
         <?php
             view_details(); // all html inside this function for dynamic data logic
+
+            cart(); // calling cart function to update no. of item and related 
         ?>
         <!-- diffrent html part just for product page end -->
     </div>
