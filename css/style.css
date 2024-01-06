@@ -207,7 +207,7 @@ p {
 .all-products {
     display: flex;
     width: 100%;
-    
+
 }
 
 /* +++++++ sidenav ++++++ */
@@ -309,7 +309,7 @@ p {
 
 #newsletter button {
     background-color: #088178;
-    color: white;
+    color: #f0f6fc;
     height: 3.125rem;
     padding: 0 0.5rem;
     width: 6rem;
@@ -323,10 +323,114 @@ p {
 
 /* *********** footer ********** */
 .footer {
-    background-color: black;
-    color: white;
-    text-align: center;
+    background-color: #24262b;
+    color: #fff;
     padding: 10px;
     position: relative;
     bottom: 0;
+    width: 100%;
+    height: auto;
+}
+
+.footer p{
+    color: #bbb;
+    margin: 0;
+}
+
+.footer-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding-bottom: 10px;
+}
+
+.footer .logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #09746c;
+}
+.footer-container .sec h2 {
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.footer-container .social-link {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+}
+
+.footer-container .social-link li {
+    list-style: none;
+}
+
+.footer-container .social-link li a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #585858d7;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.footer-container .social-link li a i {
+    font-size: 25px;
+    color: #bbb;
+}
+
+.footer-container .quicklinks {
+    position: relative;
+}
+
+.footer-container .quicklinks ul li{
+    list-style: none;
+}
+
+.footer-container .quicklinks ul li a {
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    color: #bbb;
+}
+
+.footer-container .contact-info .info {
+    position: relative;
+    color: #bbb;
+}
+
+
+.footer-container .contact-info .info li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+    align-items: center;
+    
+}
+.footer-container .contact-info .info li a {
+    color: #bbb;
+}
+
+.footer .copyrightText {
+    width: 100%;
+    border-top: 1px solid #bbb;
+    padding: 20PX;   
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .footer-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
