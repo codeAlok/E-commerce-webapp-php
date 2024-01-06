@@ -388,13 +388,42 @@
 
             if($num_of_rows > 0){
                 echo "<script>alert('This item is already present inside cart') </script>";
+                echo "<script>
+                        window.history.back();
+                    </script>";
             }
             else {
                 $insert_query = "insert into cart_details (product_id, ip_address, quantity) values ($get_product_id, '$get_ip_address', 0)";
                 $result_query = mysqli_query($con, $insert_query);
                 echo "<script>alert('Item added to cart') </script>";
+                echo "<script>
+                        window.history.back();  // to go to previous url
+                    </script>";
             }
         }
+    }
+
+    // ********** function to get number of items in cart ************
+    function cart_item() {
+        // if add_to_cart button is active/not active(not in url) then also count no. of items & update
+        if(isset($_GET['add_to_cart'])) {
+            global $con;
+
+            $get_ip_address = getIPAddress();
+            $select_query = "select * from cart_details where ip_address='$get_ip_address'";
+            $result_query = mysqli_query($con, $select_query);
+            $count_cart_items = mysqli_num_rows($result_query); // count no. of cart items
+        }
+        else {
+            global $con;
+            $get_ip_address = getIPAddress();
+            $select_query = "select * from cart_details where ip_address='$get_ip_address'";
+            $result_query = mysqli_query($con, $select_query);
+            $count_cart_items = mysqli_num_rows($result_query); // count no. of cart items
+            // echo "<script>location.reload();</script>";
+        }
+        
+        echo $count_cart_items;
     }
 
 ?>

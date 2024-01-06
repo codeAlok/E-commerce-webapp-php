@@ -48,7 +48,8 @@
                     <a href="#footer">Contact</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><sup>1</sup></a>
+                    <!-- calling cart_item() function to count and show no.of item in cart -->
+                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><sup><?php cart_item(); ?></sup></a>
                 </li>
                 <li>
                     <a href="#">Total price: 100/-</a>
