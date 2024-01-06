@@ -52,7 +52,8 @@
                     <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><sup><?php cart_item(); ?></sup></a>
                 </li>
                 <li>
-                    <a href="#">Total price: 100/-</a>
+                    <!-- updating dynamic total price -->
+                    <a href="#">Total price: <?php total_cart_price() ?>/-</a>
                 </li>
             </ul>
             <form action="" method="get">

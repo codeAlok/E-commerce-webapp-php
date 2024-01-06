@@ -48,6 +48,10 @@
                     <!-- calling cart_item() function to count and show no.of item in cart -->
                     <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><sup><?php cart_item(); ?></sup></a>
                 </li>
+                <li>
+                    <!-- updating dynamic total price -->
+                    <a href="#">Total price: <?php total_cart_price() ?>/-</a>
+                </li>
             </ul>
         </nav>
     </div>

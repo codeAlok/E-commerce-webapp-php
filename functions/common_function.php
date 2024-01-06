@@ -426,4 +426,28 @@
         echo $count_cart_items;
     }
 
+    // ******** total price function *********
+    function total_cart_price() {
+        global $con;
+
+        $get_ip_address = getIPAddress();
+        $total_price = 0;
+        $cart_query = "select * from cart_details where ip_address='$get_ip_address'";
+        $result = mysqli_query($con, $cart_query);
+
+        // to get price according to product_id having that ip_address from products table for each product
+        while($row = mysqli_fetch_array($result)) {
+            $product_id = $row['product_id']; // product_id from cart_details table
+            $select_products = "select * from products where product_id=$product_id";
+            $result_products = mysqli_query($con, $select_products);
+
+            while($row_product_price = mysqli_fetch_array($result_products)) {
+                $product_price = array($row_product_price['product_price']); // [100, 1050, 500, ...]
+                $product_values = array_sum($product_price); // [100 + 1050 + 500] = [1650]
+
+                $total_price += $product_values; // 100 + 1050 + 500 ...
+            }    
+        }
+        echo $total_price;
+    }
 ?>
