@@ -67,6 +67,36 @@
         </nav>
     </div>
 
+    <!-- ****** sidenav for small screen ***** -->
+    <div class="filter-container">
+            <div class="filter-sidenav">
+                <!-- ***** brands section ***** -->
+                <ul class="filter-nav-menu">
+                    <li class="nav-item">
+                        <a href="#"><h4>Brands</h4></a>
+                    </li>
+
+                    <?php
+                        // function call to display all brands
+                        getbrands();
+                    ?>
+
+                    <li><a href="#"><h4>categories</h4></a></li>
+                    <!-- php to insert dynamic category name from database -->
+                    <?php
+                        getcategories(); // to display all categories
+                    ?>
+                </ul>
+
+                <!-- filter hamberger icon button -->
+                <div class="filter-bar">
+                    <span class="fbar"></span>
+                    <span class="fbar"></span>
+                    <span class="fbar"></span>
+                </div>
+            </div>
+    </div>
+
     <!-- third child -->
     <div class="all-products">
         <!-- sidenav -->

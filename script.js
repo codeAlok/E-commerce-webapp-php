@@ -21,7 +21,7 @@ function slideImage() {
 window.addEventListener('resize', slideImage);
 
 
-// for navigation menu bar small screen
+//  ***** for navigation menu bar small screen *****
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -39,4 +39,26 @@ navLink.forEach(n => n.addEventListener("click", closeMenu));
 function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
+}
+
+// ****** For filter menu bar small screen *****
+const filterBar = document.querySelector(".filter-bar");
+const filterNavMenu = document.querySelector(".filter-nav-menu");
+
+filterBar.addEventListener("click", filterMobileMenu);
+
+console.log(filterBar);
+console.log(filterNavMenu);
+function filterMobileMenu() {
+    filterBar.classList.toggle("active");
+    filterNavMenu.classList.toggle("active");
+}
+
+const filterNavLink = document.querySelectorAll(".filter-nav-link");
+
+filterNavLink.forEach(n => n.addEventListener("click", filterCloseMenu));
+
+function filterCloseMenu() {
+    filterBar.classList.remove("active");
+    filterNavMenu.classList.remove("active");
 }

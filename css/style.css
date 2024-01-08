@@ -292,19 +292,154 @@ p {
 /* +++++++ sidenav ++++++ */
 .all-products .sidenav {
     width: 20%;
-    background-color: blanchedalmond;
-    text-align: center;
-    
+    background-color: #f7f7f7;
+}
+
+.sidenav ul li {
+    padding: 0.5rem 0;
+}
+.sidenav ul li a {
+    font-size: 1.2rem;
+    font-weight: 550;
+    padding-left: 1rem;
+    color: #475569;
+    transition: 0.3s ease-in;
 }
 
 .sidenav h4 {
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+    background-color: aqua;
+    
+}
+
+/* ******* for sidenav filter option menu bar ******* */
+.filter-container{
+    width: 100vw;
+    height: 10vh;
+    border: 2px solid red;
+}
+
+.filter-container ul {
+    max-height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.filter-container ul::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-sidenav h4{
+    font-size: 1.6rem;
     background-color: aqua;
 }
 
-.sidenav ul li a {
-    font-size: 1.5rem;
+.filter-nav-link {
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: #475569;
+    transition: 0.3s ease-in;
 }
+
+.filter-nav-link:hover,
+.filter-nav-link.active {
+    color: #088178;
+
+}
+
+.filter-nav-link.active::after,
+.filter-nav-link:hover::after {
+    content: "";
+    width: 40%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 0px;
+}
+
+.filter-container .filter-bar {
+    display: none;
+}
+
+.filter-container .filter-bar .fbar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+    z-index: 99;
+}
+
+@media only screen and (min-width: 800px){
+    .filter-container {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .all-products .sidenav {
+        display: none;
+    }
+
+    .filter-container .filter-nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        padding-top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 70vw;
+        min-height: 90vh;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        box-shadow:
+            0 15px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .filter-container .filter-nav-menu.active {
+        left: 0;
+    }
+
+    .filter-container .nav-item {
+        padding: 1rem 0;
+        display: block;
+        width: 100%;
+    }
+
+    .filter-container .filter-nav-link.active::after,
+    .filter-container .filter-nav-link:hover::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #088178;
+        position: absolute;
+        bottom: -4px;
+        left: 0px;
+    }
+
+    .filter-container .filter-bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    .filter-container .filter-bar.active .fbar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .filter-container .filter-bar.active .fbar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .filter-container .filter-bar.active .fbar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
 
 /* ++++++ products ++++++ */
 .product-area {
@@ -413,6 +548,7 @@ p {
     bottom: 0;
     width: 100%;
     height: auto;
+    z-index: -1;
 }
 
 .footer p{
