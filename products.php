@@ -50,7 +50,7 @@
                 </li>
                 <li class="nav-item">
                     <!-- updating dynamic total price -->
-                    <a href="#" class="nav-link">Total price: <?php total_cart_price() ?>/-</a>
+                    <a href="cart.php" class="nav-link">Total price: <?php total_cart_price() ?>/-</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -59,10 +59,11 @@
                 <span class="bar"></span>
             </div>
 
-            <!-- form for search item -->
-            <form action="" method="get" class="search-form">
-                <input type="search" placeholder="Search" aria-label="Search" name="search_data">
-                <input type="submit" value="Search" class="btn" name="search_product_data">
+            <!-- search box -->
+            <form action="" method="get" class="search-container">
+                <input type="search" placeholder="Search..." class="search-input" aria-label="Search"
+                    name="search_data">
+                <button type="submit" class="search-btn" name="search_product_data"><i class="fas fa-search"></i></button>
             </form>
         </nav>
     </div>
@@ -81,7 +82,7 @@
                         getbrands();
                     ?>
 
-                    <li><a href="#"><h4>categories</h4></a></li>
+                    <li><a href="#"><h4>Categories</h4></a></li>
                     <!-- php to insert dynamic category name from database -->
                     <?php
                         getcategories(); // to display all categories
@@ -95,6 +96,13 @@
                     <span class="fbar"></span>
                 </div>
             </div>
+
+            <!-- search box  -->
+            <form action="" method="get" class="search-container">
+                <input type="search" placeholder="Search..." class="search-input" aria-label="Search"
+                    name="search_data">
+                <button type="submit" class="search-btn" name="search_product_data"><i class="fas fa-search"></i></button>
+            </form>
     </div>
 
     <!-- third child -->
@@ -117,7 +125,7 @@
             <!-- ****** categories section ****** -->
             <ul>
                 <li>
-                    <a href="#"><h4>categories</h4></a>
+                    <a href="#"><h4>Categories</h4></a>
                 </li>
 
                 <!-- php to insert dynamic category name from database -->

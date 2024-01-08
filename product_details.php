@@ -47,7 +47,7 @@
                 </li>
                 <li class='nav-item'>
                     <!-- updating dynamic total price -->
-                    <a href="#" class="nav-link">Total price: <?php total_cart_price() ?>/-</a>
+                    <a href="cart.php" class="nav-link">Total price: <?php total_cart_price() ?>/-</a>
                 </li>
             </ul>
             <div class="hamburger">
