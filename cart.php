@@ -29,7 +29,7 @@
     
     <!-- **** navbar  *** -->
     <div class="header">
-        <a href="#" class="logo">Heel2Toe</a>
+        <a href="index.php" class="logo">Heel2Toe</a>
         <nav class="navbar">
             <ul>
                 <li>
@@ -37,9 +37,6 @@
                 </li>
                 <li>
                     <a href="products.php">Products</a>
-                </li>
-                <li>
-                    <a href="#">Register</a>
                 </li>
                 <li>
                     <a href="#footer">Contact</a>
@@ -61,63 +58,69 @@
     <!-- ************ cart item details show ********* -->
     <section class="cart-detail-area">
         <div class="row">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Product Title</th>
-                        <th>Product image</th>
-                        <th>quantity</th>
-                        <th>Total Price</th>
-                        <th>Remove</th>
-                        <th>Operations</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- php code to display dynamic data -->
-                    <?php
-                        global $con;
-
-                        $get_ip_address = getIPAddress();
-                        $total_price = 0;
-                        $cart_query = "select * from cart_details where ip_address='$get_ip_address'";
-                        $result = mysqli_query($con, $cart_query);
-                
-                        // to get price according to product_id having that ip_address from products table for each product
-                        while($row = mysqli_fetch_array($result)) {
-                            $product_id = $row['product_id']; // product_id from cart_details table
-                            $select_products = "select * from products where product_id=$product_id";
-                            $result_products = mysqli_query($con, $select_products);
-                
-                            while($row_product_price = mysqli_fetch_array($result_products)) {
-                                $product_price = array($row_product_price['product_price']); // [100, 1050, 500, ...]
-
-                                $price_table = $row_product_price['product_price'];
-                                $product_title = $row_product_price['product_title'];
-                                $product_image1 = $row_product_price['product_image1'];
-
-                                $product_values = array_sum($product_price); // [100 + 1050 + 500] = [1650]
-                                $total_price += $product_values; // 100 + 1050 + 500 ...
+            <form action="" method="post">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Title</th>
+                            <th>Product image</th>
+                            <th>quantity</th>
+                            <th>Total Price</th>
+                            <th>Remove</th>
+                            <th>Operations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- php code to display dynamic data -->
+                        <?php
+                             global $con;  // to access globally
+                            $get_ip_address = getIPAddress();
+                            $total_price = 0;
+                            $cart_query = "select * from cart_details where ip_address='$get_ip_address'";
+                            $result = mysqli_query($con, $cart_query);
                     
-                                echo "<tr>
-                                    <td>$product_title</td>
-                                    <td><img src='./admin_panel/product_images/$product_image1' alt='image1' width='140px'></td>
-                                    <td><input type='number'></td>
-                                    <td>$price_table/-</td>
-                                    <td><input type='checkbox'></td>
-                                    <td>
-                                        <button>Update</button>
-                                        <button>Remove</button>
-                                    </td>
-                                </tr>";
-                            }    
-                        } 
-                    ?>
-                </tbody>
-            </table>
+                            // to get price according to product_id having that ip_address from products table for each product
+                            while($row = mysqli_fetch_array($result)) {
+                                $product_id = $row['product_id']; // product_id from cart_details table
+                                $select_products = "select * from products where product_id=$product_id";
+                                $result_products = mysqli_query($con, $select_products);
+                    
+                                while($row_product_price = mysqli_fetch_array($result_products)) {
+                                    $product_price = array($row_product_price['product_price']); // [100, 1050, 500, ...]
 
+                                    $price_table = $row_product_price['product_price'];
+                                    $product_title = $row_product_price['product_title'];
+                                    $product_image1 = $row_product_price['product_image1'];
+
+                                    $product_values = array_sum($product_price); // [100 + 1050 + 500] = [1650]
+                                    $total_price += $product_values; // 100 + 1050 + 500 ...
+                                    
+                                    echo "<tr>
+                                        <td>$product_title</td>
+                                        <td><img src='./admin_panel/product_images/$product_image1' alt='image1' width='140px'></td>
+                                        <td><input type='number' name='quantity'></td>
+                                        <td>₹ $price_table/-</td>
+                                        <td><input type='checkbox'></td>
+                                        <td>
+                                        <input type='submit' value='Update Cart' name='update_cart'>
+                                        <button>Remove</button>
+                                        </td>
+                                        </tr>";
+                                        if(isset($_POST['update_cart'])) {
+                                            $quantities = $_POST['quantity'];
+                                            $update_cart = "update cart_details set quantity=$quantities where ip_address='$get_ip_address'";
+                                            $result_products_quantity = mysqli_query($con, $update_cart);
+                                            $total_price = $total_price * $quantities;
+                                        }
+                                }    
+                            } 
+                        ?>
+                    </tbody>
+                </table>
+            </form>               
             <!-- total price -->
             <div>
-                <h4>Subtotal: <?php echo $total_price ?>/-</h4>\
+                <h4>Subtotal: <?php echo "₹ $total_price" ?>/-</h4>\
                 <a href="#"><button>Checkout</button></a>
             </div>
         </div>

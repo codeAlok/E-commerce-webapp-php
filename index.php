@@ -29,7 +29,7 @@
     
     <!-- **** navbar  *** -->
     <div class="header">
-        <a href="#" class="logo">Heel2Toe</a>
+        <a href="index.php" class="logo">Heel2Toe</a>
         <nav class="navbar">
             <ul>
                 <li>
@@ -37,9 +37,6 @@
                 </li>
                 <li>
                     <a href="products.php">Products</a>
-                </li>
-                <li>
-                    <a href="#">Register</a>
                 </li>
                 <li>
                     <a href="#footer">Contact</a>
@@ -64,7 +61,7 @@
             <h2>Super value deals</h2>
             <h1>On all products</h1>
             <p>Save more with coupons & up to 70% off!</p>
-            <button>Shop Now</button>
+            <button><a href="products.php">Shop Now</a></button>
         </div>
 
         <img src="images/men_shoe8.jpg" alt="">
@@ -249,6 +246,7 @@
 
     </section>
 
+    <hr>
     <!-- ***** New Arrival Section ***** -->
     <section id="newArrival-products">
         <h2>Latest products</h2>
@@ -284,6 +282,10 @@
 
     <!-- include footer -->
     <?php include("./includes/footer.php");  ?>
+
+    
+    <!-- link to js file -->
+    <script src="script.js"></script>
 </body>
 
 </html>

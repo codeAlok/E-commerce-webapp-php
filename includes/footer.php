@@ -45,6 +45,6 @@
         </div>
         
         <div class="copyrightText">
-                <p>copyright 2024 @ all rights reserved</p>
+                <p>copyright 2024 &#169; all rights reserved</p>
         </div>
 </footer>

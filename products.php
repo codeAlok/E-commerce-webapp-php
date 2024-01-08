@@ -32,7 +32,7 @@
     <!-- <h1>it's working</h1> -->
     <!-- navbar -->
     <div class="header">
-        <a href="#" class="logo">LOGO</a>
+        <a href="index.php" class="logo">Heel2Toe</a>
         <nav class="navbar">
             <ul>
                 <li>
@@ -42,14 +42,11 @@
                     <a href="products.php">Products</a>
                 </li>
                 <li>
-                    <a href="#">Register</a>
-                </li>
-                <li>
                     <a href="#footer">Contact</a>
                 </li>
                 <li>
                     <!-- calling cart_item() function to count and show no.of item in cart -->
-                    <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><sup><?php cart_item(); ?></sup></a>
+                    <a href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><sup><?php cart_item(); ?></sup></a>
                 </li>
                 <li>
                     <!-- updating dynamic total price -->
@@ -62,18 +59,6 @@
             </form>
         </nav>
     </div>
-
-    <!-- second child -->
-    <nav class="navbar header">
-        <ul>
-            <li>
-                <a href="#">Welcome Guest</a>
-            </li>
-            <li>
-                <a href="#">Login</a>
-            </li>
-        </ul>
-    </nav>
 
     <!-- third child -->
     <div class="all-products">
@@ -129,6 +114,9 @@
     <!-- include footer -->
     <?php include("./includes/footer.php");  ?>
     
+    
+    <!-- link to js file -->
+    <script src="script.js"></script>
    
 </body>
 

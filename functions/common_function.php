@@ -39,7 +39,7 @@
                                         <i class='fas fa-star'></i>
                                         <i class='fas fa-star'></i>
                                     </div>
-                                    <h4>$ $product_price</h4>
+                                    <h4>₹ $product_price</h4>
                                 </div>
                             </a>
                         </div> ";
@@ -85,7 +85,7 @@
                                         <i class='fas fa-star'></i>
                                         <i class='fas fa-star'></i>
                                     </div>
-                                    <h4>$ $product_price</h4>
+                                    <h4>₹ $product_price</h4>
                                 </div>
                             </a>
                         </div> ";
@@ -135,7 +135,7 @@
                                         <i class='fas fa-star'></i>
                                         <i class='fas fa-star'></i>
                                     </div>
-                                    <h4>$ $product_price</h4>
+                                    <h4>₹ $product_price</h4>
                                 </div>
                             </a>
                         </div> ";
@@ -185,7 +185,7 @@
                                         <i class='fas fa-star'></i>
                                         <i class='fas fa-star'></i>
                                     </div>
-                                    <h4>$ $product_price</h4>
+                                    <h4>₹ $product_price</h4>
                                 </div>
                             </a>
                         </div> ";
@@ -270,7 +270,7 @@
                                         <i class='fas fa-star'></i>
                                         <i class='fas fa-star'></i>
                                     </div>
-                                    <h4>$ $product_price</h4>
+                                    <h4>₹ $product_price</h4>
                                 </div>
                             </a>
                         </div> ";
@@ -334,7 +334,7 @@
                             <div class='product-content'>
                                 <h2 class='product-title'>$product_title</h2>
             
-                                <p class='product-price'>$$product_price</p>
+                                <p class='product-price'>₹ $product_price</p>
             
                                 <div class='product-detail'>
                                     <h2>about this item: </h2>
