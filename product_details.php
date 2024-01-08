@@ -31,25 +31,30 @@
     <div class="header">
         <a href="index.php" class="logo">Heel2Toe</a>
         <nav class="navbar">
-            <ul>
-                <li>
-                    <a href="index.php">Home</a>
+            <ul class="nav-menu">
+                <li class='nav-item'>
+                    <a href="index.php" class="nav-link">Home</a>
                 </li>
-                <li>
-                    <a href="products.php">Products</a>
+                <li class='nav-item'>
+                    <a href="products.php" class="nav-link">Products</a>
                 </li>
-                <li>
-                    <a href="#footer">Contact</a>
+                <li class='nav-item'>
+                    <a href="#footer" class="nav-link">Contact</a>
                 </li>
-                <li>
+                <li class='nav-item'>
                     <!-- calling cart_item() function to count and show no.of item in cart -->
-                    <a href="cart.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><sup><?php cart_item(); ?></sup></a>
+                    <a href="cart.php" class="nav-link"><i class="fa fa-shopping-cart" aria-hidden="true"></i><sup><?php cart_item(); ?></sup></a>
                 </li>
-                <li>
+                <li class='nav-item'>
                     <!-- updating dynamic total price -->
-                    <a href="#">Total price: <?php total_cart_price() ?>/-</a>
+                    <a href="#" class="nav-link">Total price: <?php total_cart_price() ?>/-</a>
                 </li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </div>
 

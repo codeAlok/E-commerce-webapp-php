@@ -134,7 +134,7 @@ p {
     background-color: #101010;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     .nav-menu {
         position: fixed;
         right: -100%;
@@ -187,6 +187,11 @@ p {
 
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* ***** to hide search-form for small screen interface **** */
+    .navbar .search-form {
+        display: none;
     }
 
 }
@@ -282,7 +287,6 @@ p {
 .all-products {
     display: flex;
     width: 100%;
-
 }
 
 /* +++++++ sidenav ++++++ */
