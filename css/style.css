@@ -193,16 +193,17 @@ p {
 
 /* home page (landing page banner) */
 #home-banner {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    align-items: center;
+    width: 95vw;
+    height: 70vh;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     position: relative;
-    padding: 0 5vw;
+    border-radius: 10px;
 }
 
 #home-banner h4 {
-    padding-bottom: 15px;
+    padding-bottom: 1rem;
 }
 
 #home-banner h1 {
@@ -211,8 +212,7 @@ p {
 
 #home-banner button {
     padding: 0.71rem;
-    background-color: #088178;
-    color: white;
+    background-color: #0cdf17;
     border: 0;
     cursor: pointer;
     font-weight: 700;
@@ -220,41 +220,45 @@ p {
 
 }
 
+#home-banner button {
+    color: #fff;
+}
+
 #home-banner img {
     position: absolute;
-    right: 5vw;
-    width: 40%;
-    border-radius: 30%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -100;
 }
 
-/* ******* features section ****** */
-#services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    gap: 1rem;
-    padding-left: 1rem;
+.swiper {
+    width: 100%;
+    height: 100%;
 }
 
-#services-container .service {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    padding: 1rem 0;
+.swiper-button-next, .swiper-button-prev {
+    color: #bebebe;
 }
+.banner-detail{
+    position: absolute;
+    top: 30%;
+    left: 4.5em;
+  }
 
-#services-container .service i {
-    font-size: 2.5rem;
-    color: #088178;
-}
+  @media screen and (max-width: 900px) {
+    #home-banner {
+        height: 50vh;
+    }
+  }
 
-#services-container .service h3 {
-    font-size: 1.5rem;
-    color: black;
-}
-
-#services-container .service p {
-    margin: 3px 0;
-}
+  #newarrival {
+    border: 3px solid red;
+    width: 70vw;
+    height: 50vh;
+  }
 
 /* ******* Featured products ******** */
 #featured-products, #newArrival-products {

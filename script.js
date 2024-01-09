@@ -1,3 +1,25 @@
+// **** swiper slider cdn js on home page *****
+var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    grabCursor: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+
+
 
 // code to slide images in product details page
 const imgs = document.querySelectorAll('.img-select a');

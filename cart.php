@@ -134,10 +134,11 @@
                     </tbody>
                 </table>
             </form>               
-            <!-- total price -->
-            <div class='total'>
+        </div>
+        
+        <!-- total price -->
+        <div class='total'>
                 <h4>Subtotal: <?php echo "₹ $total_price" ?>/-</h4>
-            </div>
         </div>
     </section>
 

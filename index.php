@@ -18,6 +18,9 @@
     <!-- external css link -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- for swiper slider css cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
 
     <!-- font awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -60,49 +63,61 @@
 
     <!-- ***** landing page banner **** -->
     <section id="home-banner">
-        <div>
-            <h4>Trade-in-offer</h4>
-            <h2>Super value deals</h2>
-            <h1>On all products</h1>
-            <p>Save more with coupons & up to 70% off!</p>
-            <button><a href="products.php">Shop Now</a></button>
-        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <!-- ***** landing page banner **** -->
+                    <div class="banner-detail">
+                        <h4>Trade-in-offer</h4>
+                        <h2>Super value deals</h2>
+                        <h1>On all products</h1>
+                        <p>Save more with coupons & up to 70% off!</p>
+                        <button><a href="products.php">Shop Now</a></button>
+                    </div>
 
-        <img src="images/men_shoe8.jpg" alt="">
-    </section>
+                    <img src="images/men_shoe15.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <!-- ***** landing page banner **** -->
+                    <div class="banner-detail">
+                        <h4>Trade-in-offer</h4>
+                        <h2>Super value deals</h2>
+                        <h1>On all products</h1>
+                        <p>Save more with coupons & up to 70% off!</p>
+                        <button><a href="products.php">Shop Now</a></button>
+                    </div>
 
-    <!-- ******* e-commerce services ********* -->
-    <section id="services-container">
-        <div class="service">
-            <i class="fa-solid fa-truck"></i>
-            <div class="content">
-                <h3>free shipping</h3>
-                <p>order over $100</p>
+                    <img src="images/women_shoe1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <!-- ***** landing page banner **** -->
+                    <div class="banner-detail">
+                        <h4>Trade-in-offer</h4>
+                        <h2>Super value deals</h2>
+                        <h1>On all products</h1>
+                        <p>Save more with coupons & up to 70% off!</p>
+                        <button><a href="products.php">Shop Now</a></button>
+                    </div>
+
+                    <img src="images/men_shoe2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <!-- ***** landing page banner **** -->
+                    <div class="banner-detail">
+                        <h4>Trade-in-offer</h4>
+                        <h2>Super value deals</h2>
+                        <h1>On all products</h1>
+                        <p>Save more with coupons & up to 70% off!</p>
+                        <button><a href="products.php">Shop Now</a></button>
+                    </div>
+
+                    <img src="images/men_shoe1.jpg" alt="">
+                </div>
             </div>
-        </div>
-
-        <div class="service">
-            <i class="fa-solid fa-money-bill-transfer"></i>
-            <div class="content">
-                <h3>Money Back Gurantee</h3>
-                <p>Within 24 hours</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <i class="fa-solid fa-lock"></i>
-            <div class="content">
-                <h3>Secure payment</h3>
-                <p>100% secure payment</p>
-            </div>
-        </div>
-
-        <div class="service">
-            <i class="fa-solid fa-headset"></i>
-            <div class="content">
-                <h3>24/7 support</h3>
-                <p>call us anytime</p>
-            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -287,7 +302,9 @@
     <!-- include footer -->
     <?php include("./includes/footer.php");  ?>
 
-    
+    <!-- swiper js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- link to js file -->
     <script src="script.js"></script>
 </body>

@@ -15,6 +15,7 @@ body {
   .cart-table {
     width: 100%;
     padding: 1rem;
+    overflow-x: scroll;
   }
 
 
@@ -28,7 +29,7 @@ body {
     margin: 0 auto;
   }
 
-  .cart-table .total {
+  .cart-detail-area .total {
       text-align: center;
       width: 100%;
       margin:0 auto;
@@ -38,7 +39,7 @@ body {
     font-weight: 700;
   }
 
-  .cart-table .total h4 {
+  .cart-detail-area .total h4 {
     font-weight: 700;
     color: #313131;
   }
