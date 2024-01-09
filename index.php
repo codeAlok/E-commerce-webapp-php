@@ -156,6 +156,20 @@
         </div>
     </section>
 
+     <!-- ******** featured products ******** -->
+     <section id="featured-products">
+        <h2>Featured products</h2>
+        <p>Winter Collection New Modern Designs</p>
+
+        <div class="card-area">
+            <!-- fetching dynamically some random products as featured product from db -->
+            <?php
+                featuredProducts();
+            ?>
+        </div>
+
+    </section>
+
     <hr>
     <!-- ***** New Arrival Section ***** -->
     <section id="newArrival-products">
