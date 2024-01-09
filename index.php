@@ -121,18 +121,39 @@
         </div>
     </section>
 
-    <!-- ******** featured products ******** -->
-    <section id="featured-products">
-        <h2>Featured products</h2>
-        <p>Winter Collection New Modern Designs</p>
-
-        <div class="card-area">
-            <!-- fetching dynamically some random products as featured product from db -->
-            <?php
-                featuredProducts();
-            ?>
+    <!-- ******* e-commerce services ********* -->
+    <section id="services-container">
+        <div class="service">
+            <i class="fa-solid fa-truck"></i>
+            <div class="content">
+                <h3>free shipping</h3>
+                <p>order over $100</p>
+            </div>
         </div>
 
+        <div class="service">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            <div class="content">
+                <h3>Money Back Gurantee</h3>
+                <p>Within 24 hours</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-lock"></i>
+            <div class="content">
+                <h3>Secure payment</h3>
+                <p>100% secure payment</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-headset"></i>
+            <div class="content">
+                <h3>24/7 support</h3>
+                <p>call us anytime</p>
+            </div>
+        </div>
     </section>
 
     <hr>

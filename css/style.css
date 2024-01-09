@@ -260,6 +260,35 @@ p {
     height: 50vh;
   }
 
+  /* ******* features section ****** */
+#services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+    margin: 1rem;
+    padding-left: 1rem;
+}
+
+#services-container .service {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem 0;
+}
+
+#services-container .service i {
+    font-size: 2.5rem;
+    color: #088178;
+}
+
+#services-container .service h3 {
+    font-size: 1.5rem;
+    color: black;
+}
+
+#services-container .service p {
+    margin: 3px 0;
+}
 /* ******* Featured products ******** */
 #featured-products, #newArrival-products {
     text-align: center;
