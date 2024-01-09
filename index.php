@@ -127,140 +127,10 @@
         <p>Winter Collection New Modern Designs</p>
 
         <div class="card-area">
-            <div class="card">
-                <a href="#">
-                    <div class="card-image">
-                        <img src="images/men_shoe3.jpg" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h5>Puma</h5>
-                        <p>This is a new product recently launched</p>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$80</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="#">
-                    <div class="card-image">
-                        <img src="images/women_slipper2.jpg" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h5>Puma</h5>
-                        <p>This is a new product recently launched</p>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$80</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="#">
-                    <div class="card-image">
-                        <img src="images/men_shoe10.jpg" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h5>Puma</h5>
-                        <p>This is a new product recently launched</p>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$80</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="#">
-                    <div class="card-image">
-                        <img src="images/women_slipper3.jpg" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h5>Puma</h5>
-                        <p>This is a new product recently launched</p>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$80</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="#">
-                    <div class="card-image">
-                        <img src="images/men_shoe3.jpg" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h5>Puma</h5>
-                        <p>This is a new product recently launched</p>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$80</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="#">
-                    <div class="card-image">
-                        <img src="images/shoe1.jpg" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h5>Puma</h5>
-                        <p>This is a new product recently launched</p>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$80</h4>
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="#">
-                    <div class="card-image">
-                        <img src="images/men_shoe5.jpg" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h5>Puma</h5>
-                        <p>This is a new product recently launched</p>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4>$80</h4>
-                    </div>
-                </a>
-            </div>
-
+            <!-- fetching dynamically some random products as featured product from db -->
+            <?php
+                featuredProducts();
+            ?>
         </div>
 
     </section>
@@ -274,10 +144,10 @@
         <!-- ***** products  ****** -->
         <div class="card-area">
 
-            <!-- fetching dynamic products from db -->
+            <!-- fetching dynamic latest (last added)products from db -->
             <?php
                 
-                getproducts(); // to display all products
+                latestProducts(); // to display all products
 
             ?>
 

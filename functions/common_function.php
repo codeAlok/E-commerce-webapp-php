@@ -3,7 +3,7 @@
     include('./includes/connect.php');
 
     // ********* function for getting all products **********
-    function getproducts() {
+    function featuredProducts() {
         global $con;  // to access globally
 
 
@@ -12,7 +12,53 @@
             if(!isset($_GET['brand'])) {
 
                 // query to fetch all products and display that in random order
-                $select_query = "select * from products order by rand()";
+                $select_query = "select * from products order by rand() limit 0,7";
+                $result_query = mysqli_query($con, $select_query);
+                
+                while($row = mysqli_fetch_assoc($result_query)) {
+                    $product_id = $row['product_id'];
+                    $product_title = $row['product_title'];
+                    $product_description = $row['product_description'];
+                    $product_image1 = $row['product_image1'];
+                    $product_price = $row['product_price'];
+                    $brand_id = $row['brand_id'];
+                    $category_id = $row['category_id'];
+        
+                    echo "<div class='card'>
+                            <a href='product_details.php?product_id=$product_id'>
+                                <div class='card-image'>
+                                    <img src='./admin_panel/product_images/$product_image1' alt='product1'>
+                                </div>
+                                <div class='card-body'>
+                                    <h5>$product_title</h5>
+                                    <p>$product_description</p>
+                                    <div class='star'>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                        <i class='fas fa-star'></i>
+                                    </div>
+                                    <h4>₹ $product_price</h4>
+                                </div>
+                            </a>
+                        </div> ";
+                }
+            }
+        }
+    }
+
+    // ********* function for getting some latest products **********
+    function latestProducts() {
+        global $con;  // to access globally
+
+
+        // condition to check brand variable or category variable isset, if not given then show all products
+        if(!isset($_GET['category'])) {
+            if(!isset($_GET['brand'])) {
+
+                // query to fetch all products and display that in random order
+                $select_query = "select * from products order by product_id DESC limit 0,4";
                 $result_query = mysqli_query($con, $select_query);
                 
                 while($row = mysqli_fetch_assoc($result_query)) {
