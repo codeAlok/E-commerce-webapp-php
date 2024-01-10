@@ -20,7 +20,6 @@
 
     <!-- for swiper slider css cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style.css">
 
     <!-- font awesome link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -76,7 +75,7 @@
                         <button><a href="products.php">Shop Now</a></button>
                     </div>
 
-                    <img src="images/men_shoe15.jpg" alt="">
+                    <img src="images/redtape_shoe_2.3.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
                     <!-- ***** landing page banner **** -->
@@ -88,7 +87,7 @@
                         <button><a href="products.php">Shop Now</a></button>
                     </div>
 
-                    <img src="images/women_shoe1.jpg" alt="">
+                    <img src="images/zuko_shoe_women_12.3.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
                     <!-- ***** landing page banner **** -->
@@ -100,7 +99,7 @@
                         <button><a href="products.php">Shop Now</a></button>
                     </div>
 
-                    <img src="images/men_shoe2.jpg" alt="">
+                    <img src="images/nike_shoe_8.2.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
                     <!-- ***** landing page banner **** -->
@@ -112,7 +111,7 @@
                         <button><a href="products.php">Shop Now</a></button>
                     </div>
 
-                    <img src="images/men_shoe1.jpg" alt="">
+                    <img src="images/us_shoe_5.2.jpg" alt="">
                 </div>
             </div>
             <div class="swiper-button-next"></div>
@@ -211,7 +210,28 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- link to js file -->
-    <script src="script.js"></script>
+    <script src="script.js">
+        // **** swiper slider cdn js on home page *****
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            grabCursor: true,
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+        });
+
+    </script>
 </body>
 
 </html>

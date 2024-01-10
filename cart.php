@@ -215,12 +215,12 @@
                 <h3>Payment</h3>
                 <label for="fname">Accepted Cards</label>
                 <div class="icon-container">
-                  <i class="fa fa-cc-visa" style="color: navy"></i>
-                  <i class="fa fa-cc-mastercard" style="color: red"></i>
+                  <i class="fa-brands fa-cc-visa" style="color: navy"></i>
+                  <i class="fa-brands fa-cc-mastercard" style="color: red"></i>
                   <i class="fa-brands fa-cc-amazon-pay" style="color: rgb(235, 235, 36)"></i>
                   <i class="fa-brands fa-cc-paypal" style="color: rgb(11, 186, 235)"></i>
-                  <i class="fa fa-cc-amex" style="color: blue"></i>
-                  <i class="fa fa-cc-discover" style="color: orange"></i>
+                  <i class="fa-brands fa-cc-amex" style="color: blue"></i>
+                  <i class="fa-brands fa-cc-discover" style="color: orange"></i>
                 </div>
                 <label for="cname">Cardholder name</label>
                 <input
