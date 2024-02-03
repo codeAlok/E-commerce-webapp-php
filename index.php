@@ -75,7 +75,7 @@
                         <button><a href="products.php">Shop Now</a></button>
                     </div>
 
-                    <img src="images/redtape_shoe_2.3.jpg" alt="">
+                    <img src="images/img1.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
                     <!-- ***** landing page banner **** -->
@@ -87,7 +87,7 @@
                         <button><a href="products.php">Shop Now</a></button>
                     </div>
 
-                    <img src="images/zuko_shoe_women_12.3.jpg" alt="">
+                    <img src="images/img2.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
                     <!-- ***** landing page banner **** -->
@@ -99,7 +99,7 @@
                         <button><a href="products.php">Shop Now</a></button>
                     </div>
 
-                    <img src="images/nike_shoe_8.2.jpg" alt="">
+                    <img src="images/img3.jpg" alt="">
                 </div>
                 <div class="swiper-slide">
                     <!-- ***** landing page banner **** -->
@@ -111,7 +111,19 @@
                         <button><a href="products.php">Shop Now</a></button>
                     </div>
 
-                    <img src="images/us_shoe_5.2.jpg" alt="">
+                    <img src="images/img4.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <!-- ***** landing page banner **** -->
+                    <div class="banner-detail">
+                        <h4>Trade-in-offer</h4>
+                        <h2>Super value deals</h2>
+                        <h1>On all products</h1>
+                        <p>Save more with coupons & up to 70% off!</p>
+                        <button><a href="products.php">Shop Now</a></button>
+                    </div>
+
+                    <img src="images/img5.jpg" alt="">
                 </div>
             </div>
             <div class="swiper-button-next"></div>
@@ -210,7 +222,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- link to js file -->
-    <script src="script.js">
+    <script>
         // **** swiper slider cdn js on home page *****
         var swiper = new Swiper(".mySwiper", {
             spaceBetween: 30,
