@@ -73,7 +73,7 @@
             <div class="filter-sidenav">
                 <!-- ***** brands section ***** -->
                 <ul class="filter-nav-menu">
-                    <li class="nav-item">
+                    <li style="margin-top: 1.5rem">
                         <a href="#"><h4>Brands</h4></a>
                     </li>
 
@@ -82,7 +82,7 @@
                         getbrands();
                     ?>
 
-                    <li><a href="#"><h4>Categories</h4></a></li>
+                    <li style="margin-top: 1rem;"><a href="#"><h4>Categories</h4></a></li>
                     <!-- php to insert dynamic category name from database -->
                     <?php
                         getcategories(); // to display all categories
@@ -110,10 +110,8 @@
         <!-- sidenav -->
         <div class="sidenav">
             <!-- ***** brands section ***** -->
+            <h4 style="margin-top: 1rem;">Brands</h4>
             <ul>
-                <li>
-                    <a href="#"><h4>Brands</h4></a>
-                </li>
 
                 <!-- php to insert dynamic brands name from database -->
                 <?php
@@ -123,11 +121,8 @@
             </ul>
 
             <!-- ****** categories section ****** -->
+            <h4 style="margin-top: 1rem;">Categories</h4>
             <ul>
-                <li>
-                    <a href="#"><h4>Categories</h4></a>
-                </li>
-
                 <!-- php to insert dynamic category name from database -->
                 <?php
                     getcategories(); // to display all categories

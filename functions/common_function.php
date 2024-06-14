@@ -255,7 +255,7 @@
             $brand_title = $row_data['brand_title'];
             $brand_id = $row_data['brand_id'];
 
-            echo "<li class='nav-item'> <a href='products.php?brand=$brand_id' class='filter-nav-link'> $brand_title </a> </li>";
+            echo "<a href='products.php?brand=$brand_id' class='filter-nav-link'> <li class='nav-item'> $brand_title  </li></a>";
         }
     }
 
@@ -270,7 +270,7 @@
             $category_title = $row_data['category_title'];
             $category_id = $row_data['category_id'];
 
-            echo "<li class='nav-item'> <a href='products.php?category=$category_id' class='filter-nav-link'> $category_title </a> </li>";
+            echo "<a href='products.php?category=$category_id' class='filter-nav-link'><li class='nav-item'>  $category_title  </li></a>";
 
         }
     }

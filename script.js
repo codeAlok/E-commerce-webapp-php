@@ -48,8 +48,6 @@ const filterNavMenu = document.querySelector(".filter-nav-menu");
 
 filterBar.addEventListener("click", filterMobileMenu);
 
-console.log(filterBar);
-console.log(filterNavMenu);
 function filterMobileMenu() {
     filterBar.classList.toggle("active");
     filterNavMenu.classList.toggle("active");
