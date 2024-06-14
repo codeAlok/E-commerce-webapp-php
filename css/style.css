@@ -218,7 +218,7 @@ p {
 
 #home-banner button {
     padding: 0.71rem;
-    background-color: #0dc417;
+    background-color: #067770;
     border: 0;
     cursor: pointer;
     font-weight: 700;
@@ -227,7 +227,8 @@ p {
 }
 
 #home-banner button a{
-    color: #0456c2;
+    color: #ffffff;
+    letter-spacing: 1px;
 }
 
 #home-banner img {
@@ -264,14 +265,19 @@ p {
         height: 50vh;
     }
 
+    #home-banner h4 {
+        font-size: 0.8rem;
+        padding-bottom: 0.8rem;
+    }
+
     #home-banner h2 {
-        font-size: 2rem;
-        line-height: 40px;
+        font-size: 1rem;
+        line-height:20px;
     }
 
     #home-banner h1 {
-        font-size: 2.4rem;
-        line-height: 40px;
+        font-size: 1.5rem;
+        line-height: 30px;
     }
 }
 
@@ -555,6 +561,7 @@ p {
     text-wrap: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: 10px;
 }
 
 .card .card-image {
@@ -570,6 +577,11 @@ p {
 
 .card-body .star i {
     color: orange;
+}
+
+.card-body h5 {
+    font-size: 1.2rem;
+    color: #088178;
 }
 
 /* ****** newsletter section ****** */
@@ -670,6 +682,7 @@ p {
 
 .footer-container .social-link li {
     list-style: none;
+    cursor: pointer;
 }
 
 .footer-container .social-link li a {
@@ -681,6 +694,7 @@ p {
     align-content: center;
     justify-content: center;
     text-decoration: none;
+    
 }
 
 .footer-container .social-link li a i {

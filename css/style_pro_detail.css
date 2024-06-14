@@ -103,21 +103,28 @@ img{
     border: 1.5px solid #ddd;
     border-radius: 25px;
     text-align: center;
-    padding: 0.45rem 0.8rem;
+    padding: 0.6rem 0.8rem;
     outline: 0;
     margin-right: 0.2rem;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
-.purchase-info .btn{
-    cursor: pointer;
-    color: #fff;
+.purchase-info .btn a{
+    color: white;
+    font-weight:300;
 }
+
+.purchase-info .btn a i {
+    padding-left: 3px;
+}
+
 .purchase-info .btn:first-of-type{
-    background: #256eff;
+    background: #3aaa85;
 }
 .purchase-info .btn:last-of-type{
-    background: #f64749;
+    background: #ec9819;
+
 }
 .purchase-info .btn:hover{
     opacity: 0.9;

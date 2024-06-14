@@ -390,7 +390,7 @@
                                     <button type='button' class='btn'><a href='product_details.php?product_id=$product_id&add_to_cart=$product_id'>
                                     Add to Cart<i class='fa-solid fa-cart-arrow-down'></i></a></i>
                                     </button>
-                                    <button type='button' class='btn'><a href='#'>Buy Now<i class='fa-solid fa-heart'></i></a></button>
+                                    <button type='button' class='btn'><a href='cart.php'>Buy Now<i class='fa-solid fa-heart'></i></a></button>
                                 </div>
                             </div>
                         </div>

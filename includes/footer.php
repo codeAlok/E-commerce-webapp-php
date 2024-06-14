@@ -4,13 +4,13 @@
         <div class="footer-container">
                 <section class="sec slogan">
                         <h2><a href="#" class="logo">Heel2Toe</a></h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum soluta aliquam eos doloribus magni! Soluta odio sed repellat possimus minima?</p>
+                        <p>Welcome to Heel2Toe, your premier destination for high-quality, stylish footwear. Discover expertly crafted shoes for every occasion, blending fashion with exceptional comfort.</p>
 
                         <ul class="social-link">
-                                <li class="#"><a href="#"><i class="fa-brands fa-square-facebook"></a></i></li>
-                                <li class="#"><a href="#"><i class="fa-brands fa-square-x-twitter"></a></i></li>
-                                <li class="#"><a href="#"><i class="fa-brands fa-square-instagram"></a></i></li>
-                                <li class="#"><a href="#"><i class="fa-brands fa-linkedin"></a></i></li>
+                                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+                                <li><a href="https://github.com/codeAlok" target="_blank"><i class="fa-brands fa-square-github"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/alok-kumar-650b37208/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                         </ul>
                 </section>
                 <section class="sec quicklinks">
